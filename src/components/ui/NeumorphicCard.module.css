@@ -1,0 +1,10 @@
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 40px;
+  box-shadow:
+    9px 9px 18px var(--nm-dark),
+    -9px -9px 18px var(--nm-light);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

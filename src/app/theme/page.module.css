@@ -1,0 +1,145 @@
+.page {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px 60px;
+  color: var(--color-text);
+  font-family: var(--font-page);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.titleSection {
+  text-align: center;
+  padding: 60px 20px 40px;
+  margin-bottom: 40px;
+}
+
+.titleSection h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.titleSection p {
+  font-size: 20px;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reasonCard {
+  margin-bottom: 40px;
+  animation: var(--animation-fade-in-up);
+  opacity: 0;
+}
+
+.reasonCard:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.reasonCard:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.reasonCard:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-heading-blue);
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+  text-shadow:
+    0 0 10px rgba(59, 130, 246, 0.25),
+    0 0 20px rgba(59, 130, 246, 0.15),
+    0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.card p:last-child,
+.highlightBox p {
+  margin-bottom: 0;
+}
+
+.card strong {
+  color: var(--color-emphasis-blue);
+  font-weight: 700;
+  text-shadow:
+    0 0 15px rgba(90, 145, 234, 0.18),
+    0 0 30px rgba(90, 145, 234, 0.08);
+}
+
+.highlightBox {
+  background: var(--color-surface);
+  padding: 24px 28px;
+  margin: 24px 0 0;
+  border-radius: 16px;
+  box-shadow:
+    inset 4px 4px 10px rgba(163, 177, 198, 0.35),
+    inset -4px -4px 10px var(--nm-light-soft);
+}
+
+.reasonList {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reasonList li {
+  padding: 20px 24px;
+  background: var(--color-surface);
+  border-radius: 16px;
+  font-size: 18px;
+  line-height: 1.7;
+  box-shadow:
+    inset 4px 4px 10px rgba(163, 177, 198, 0.35),
+    inset -4px -4px 10px var(--nm-light-soft);
+}
+
+.reasonList li strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 1200px) {
+  .titleSection h1 {
+    font-size: 48px;
+  }
+  .page {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    font-size: 16px;
+  }
+  .titleSection h1 {
+    font-size: 40px;
+  }
+  .card {
+    padding: 30px;
+    border-radius: 24px;
+  }
+  .card h2 {
+    font-size: 28px;
+  }
+  .card p,
+  .reasonList li {
+    font-size: 16px;
+  }
+}

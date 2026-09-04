@@ -1,0 +1,370 @@
+.main {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px 60px;
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: var(--font-page);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.titleSection {
+  text-align: center;
+  padding: 60px 20px 40px;
+  margin-bottom: 40px;
+}
+.titleSection h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+.titleSection p {
+  font-size: 20px;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.techSection {
+  margin-bottom: 40px;
+}
+.techSection,
+.referencesSection {
+  animation: var(--animation-fade-in-up);
+  opacity: 0;
+}
+.delayOne {
+  animation-delay: 0.1s;
+}
+.delayTwo {
+  animation-delay: 0.2s;
+}
+.delayThree {
+  animation-delay: 0.3s;
+}
+.delayFour {
+  animation-delay: 0.4s;
+}
+.delayFive {
+  animation-delay: 0.5s;
+}
+
+.card {
+  padding: 40px;
+}
+.techTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-heading-blue);
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 3px solid var(--color-rule-blue);
+  text-shadow:
+    0 0 10px rgba(59, 130, 246, 0.25),
+    0 0 20px rgba(59, 130, 246, 0.15),
+    0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.techDescription {
+  margin-bottom: 32px;
+}
+.techDescription h3,
+.demoContainer h3,
+.techFeatures h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-emphasis-blue);
+  margin-bottom: 16px;
+  text-shadow:
+    0 0 15px rgba(90, 145, 234, 0.18),
+    0 0 30px rgba(90, 145, 234, 0.08);
+}
+.techDescription h3 {
+  margin-top: 20px;
+}
+.techDescription p,
+.techFeatures p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.demoContainer,
+.techFeatures {
+  margin: 32px 0;
+}
+
+.demoBox {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--color-surface) 0%, #d5dce3 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    inset 6px 6px 12px rgba(163, 177, 198, 0.3),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
+.demoInstruction,
+.staticDemoInstruction {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+.demoInstruction {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.neuroDemoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+.neuroDemoItem {
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.demoLabel {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+.neuroDemoItem p {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+.neuroRaised {
+  box-shadow:
+    9px 9px 18px rgba(163, 177, 198, 0.45),
+    -9px -9px 18px rgba(255, 255, 255, 0.95);
+}
+.neuroPressed {
+  box-shadow:
+    inset 6px 6px 12px rgba(163, 177, 198, 0.4),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.8);
+}
+.neuroFlat {
+  box-shadow:
+    3px 3px 8px rgba(163, 177, 198, 0.25),
+    -3px -3px 8px rgba(255, 255, 255, 0.6);
+}
+
+.glassDemoWrapper {
+  margin-top: 20px;
+}
+.glassDemoBackground {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  background: var(--color-surface);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow:
+    6px 6px 12px rgba(163, 177, 198, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.9);
+  padding: 30px;
+}
+.glassDemoText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: 900;
+  font-family: var(--font-serif-jp);
+  color: var(--color-black);
+  z-index: 1;
+  opacity: 0.8;
+  letter-spacing: 0.05em;
+  max-width: 90%;
+  text-align: center;
+  line-height: 1.2;
+}
+.glassDemoElement {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(18px) saturate(145%);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 16px;
+  padding: 32px 48px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.36),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.glassDemoElement h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+.glassDemoElement p {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.liquidDemoWrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.staticDemoInstruction {
+  position: static;
+  transform: none;
+}
+
+.referencesSection {
+  margin: 40px 0;
+}
+.referencesSection h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(163, 177, 198, 0.3);
+}
+.referenceCategory {
+  margin-bottom: 24px;
+}
+.referenceCategory:last-child {
+  margin-bottom: 0;
+}
+.referenceCategory h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+.referencesList {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+.referencesList li {
+  padding: 8px 0;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+.referencesList li::marker {
+  color: var(--color-text-muted);
+}
+.referencesList a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  word-break: break-all;
+}
+.referencesList a:hover {
+  color: #3b6388;
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .titleSection h1 {
+    font-size: 48px;
+  }
+  .main {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleSection h1 {
+    font-size: 40px;
+  }
+  .techTitle {
+    font-size: 28px;
+  }
+  .techDescription h3,
+  .demoContainer h3,
+  .techFeatures h3 {
+    font-size: 22px;
+  }
+  .card {
+    padding: 30px;
+    border-radius: 24px;
+  }
+  .main {
+    font-size: 16px;
+  }
+  .techDescription p {
+    font-size: 16px;
+  }
+  .demoBox {
+    height: 300px;
+  }
+  .neuroDemoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .techTitle {
+    font-size: 24px;
+  }
+  .demoBox {
+    height: 250px;
+  }
+  .glassDemoBackground {
+    min-height: 300px;
+    padding: 20px;
+  }
+  .glassDemoText {
+    font-size: 48px;
+    max-width: 95%;
+  }
+  .glassDemoElement {
+    width: 100%;
+    max-width: 260px;
+    padding: 20px 16px;
+  }
+  .glassDemoElement h4 {
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .techSection,
+  .referencesSection {
+    opacity: 1;
+    animation: none;
+  }
+}

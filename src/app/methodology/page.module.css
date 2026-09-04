@@ -1,0 +1,219 @@
+.main {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px 60px;
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: var(--font-page);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.titleSection {
+  text-align: center;
+  padding: 60px 20px 40px;
+  margin-bottom: 40px;
+}
+
+.titleSection h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.titleSection p {
+  font-size: 20px;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.methodologyCard {
+  margin-bottom: var(--space-xl);
+  scroll-margin-top: 100px;
+  animation: var(--animation-fade-in-up);
+  opacity: 0;
+}
+
+.delayOne {
+  animation-delay: 0.1s;
+}
+.delayTwo {
+  animation-delay: 0.2s;
+}
+.delayThree {
+  animation-delay: 0.3s;
+}
+
+.card {
+  padding: 40px;
+}
+
+.cardHeader {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-heading-blue);
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-shadow:
+    0 0 10px rgba(59, 130, 246, 0.25),
+    0 0 20px rgba(59, 130, 246, 0.15),
+    0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.prosCons {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.pros,
+.cons {
+  flex: 1;
+}
+
+.pros h3,
+.cons h3 {
+  font-size: 22px;
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+}
+
+.pros h3 {
+  color: var(--color-positive);
+}
+.cons h3 {
+  color: var(--color-negative);
+}
+
+.pros ul,
+.cons ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pros li,
+.cons li {
+  margin-bottom: var(--space-sm);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.pros li::before,
+.cons li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.pros li::before {
+  color: var(--color-positive);
+}
+.cons li::before {
+  color: var(--color-negative);
+}
+
+.exampleContainer {
+  display: flex;
+  gap: var(--space-lg);
+  margin: var(--space-md) 0;
+}
+
+.example {
+  flex: 1;
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border-radius: 15px;
+  box-shadow:
+    inset 5px 5px 10px rgba(163, 177, 198, 0.5),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+.exampleTitle {
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+  color: var(--color-emphasis-blue);
+}
+
+.exampleDiagram {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.apiIntro {
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  line-height: 1.8;
+  background: var(--color-surface);
+  border-radius: 15px;
+  box-shadow:
+    inset 5px 5px 10px rgba(163, 177, 198, 0.5),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+.apiHeading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.apiHeading span {
+  font-size: 22px;
+  color: var(--color-primary);
+  margin-right: 10px;
+}
+
+.apiHeading h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.apiList {
+  padding-left: 1.5rem;
+  margin: var(--space-md) 0;
+}
+
+.apiList li {
+  margin-bottom: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .prosCons,
+  .exampleContainer {
+    flex-direction: column;
+  }
+  .methodologyCard {
+    scroll-margin-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .methodologyCard {
+    scroll-margin-top: 90px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .methodologyCard {
+    opacity: 1;
+    animation: none;
+  }
+}

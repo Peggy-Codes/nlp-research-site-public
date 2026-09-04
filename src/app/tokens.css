@@ -1,0 +1,66 @@
+:root {
+  --color-surface: #e8edf1;
+  --color-surface-glass: rgba(240, 242, 245, 0.97);
+  --color-surface-clear: rgba(255, 255, 255, 0.22);
+  --color-surface-toggle: rgba(255, 255, 255, 0.46);
+  --color-text: #2d3748;
+  --color-text-strong: #2c3e50;
+  --color-text-muted: #4a5568;
+  --color-text-fallback: #666666;
+  --color-primary: #4a7ba7;
+  --color-primary-strong: #6b97c4;
+  --color-accent: #5d8ab8;
+  --color-heading-blue: #3b82f6;
+  --color-emphasis-blue: #5a91ea;
+  --color-rule-blue: #60a5fa;
+  --color-positive: #2ecc71;
+  --color-negative: #e74c3c;
+  --color-copy-success: #22c55e;
+  --color-focus: #235f91;
+  --color-code-background: #2d2d2d;
+  --color-code-text: #cccccc;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --nm-light: rgba(255, 255, 255, 0.95);
+  --nm-light-soft: rgba(255, 255, 255, 0.8);
+  --nm-dark: rgba(163, 177, 198, 0.45);
+  --nm-dark-soft: rgba(163, 177, 198, 0.3);
+  --shadow-light-1: #ffffff;
+  --shadow-light-2: #d5dbe3;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2rem;
+  --radius-card: 30px;
+
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-original: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-liquid: cubic-bezier(1, 0, 0.4, 1);
+  --dur-micro: 120ms;
+  --dur-short: 300ms;
+  --dur-long: 600ms;
+  --animation-fade-in-up: fadeInUp 0.6s ease-out forwards;
+
+  --z-behind: -1;
+  --z-base: 1;
+  --z-raised: 100;
+  --z-sticky: 1000;
+}
+
+body {
+  --font-sans:
+    var(--font-inter), var(--font-noto-sans-jp), "Hiragino Sans", sans-serif;
+  --font-page: var(--font-noto-sans-jp), "Hiragino Sans", sans-serif;
+  --font-serif-jp: var(--font-noto-serif-jp), serif;
+}

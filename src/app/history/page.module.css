@@ -1,0 +1,351 @@
+.main {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px 60px;
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: var(--font-page);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.titleSection {
+  text-align: center;
+  padding: 60px 20px 40px;
+  margin-bottom: 40px;
+}
+
+.titleSection h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.titleSection p {
+  font-size: 20px;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.introSection,
+.timelineCard,
+.referencesSection {
+  margin-bottom: 40px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: var(--animation-fade-in-up);
+  opacity: 0;
+}
+
+.delayOne {
+  animation-delay: 0.1s;
+}
+.delayTwo {
+  animation-delay: 0.3s;
+}
+.delayThree {
+  animation-delay: 0.4s;
+}
+.delayFour {
+  animation-delay: 0.5s;
+}
+.delayFive {
+  animation-delay: 0.6s;
+}
+.delaySix {
+  animation-delay: 0.7s;
+}
+
+.card {
+  padding: 40px;
+}
+
+.card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-heading-blue);
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+  text-shadow:
+    0 0 10px rgba(59, 130, 246, 0.25),
+    0 0 20px rgba(59, 130, 246, 0.15),
+    0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card strong {
+  color: var(--color-emphasis-blue);
+  font-weight: 700;
+  text-shadow:
+    0 0 15px rgba(90, 145, 234, 0.18),
+    0 0 30px rgba(90, 145, 234, 0.08);
+}
+
+.timelineCard {
+  scroll-margin-top: 120px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.timelineYear {
+  flex: 0 0 180px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: 20px;
+  padding-top: 40px;
+}
+
+.eraBadge {
+  display: inline-block;
+  color: var(--color-text-strong);
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.timelineDot {
+  flex: 0 0 28px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.timelineDot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: rgba(163, 177, 198, 0.5);
+}
+
+.timelineDot::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: var(--color-surface);
+  border-radius: 50%;
+  border: 1px solid rgba(163, 177, 198, 0.4);
+  box-shadow:
+    inset 2px 2px 4px rgba(163, 177, 198, 0.4),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.8),
+    2px 2px 6px rgba(163, 177, 198, 0.3),
+    -2px -2px 6px rgba(255, 255, 255, 0.6);
+  z-index: var(--z-base);
+}
+
+.timelineCard:nth-last-of-type(2) .timelineDot::before {
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(163, 177, 198, 0.5) 0%,
+    rgba(163, 177, 198, 0.5) 80%,
+    transparent 100%
+  );
+}
+
+.timelineContent {
+  flex: 1;
+  padding-left: 20px;
+  min-width: 0;
+}
+
+.timelineContent .card {
+  padding-top: 40px;
+}
+
+.eraSubtitle {
+  font-size: 26px;
+  color: var(--color-heading-blue);
+  margin: 6px 0 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-align: left;
+  text-shadow:
+    0 0 10px rgba(59, 130, 246, 0.25),
+    0 0 20px rgba(59, 130, 246, 0.15),
+    0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.historyImageContainer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.historyImageContainer img {
+  display: inline;
+  vertical-align: baseline;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card .historyImageContainer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-fallback);
+  font-style: italic;
+}
+
+.referencesList {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: reference-counter;
+}
+
+.referencesList li {
+  counter-increment: reference-counter;
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) 2.5rem;
+  margin-bottom: var(--space-sm);
+  position: relative;
+  font-size: 16px;
+  line-height: 1.8;
+  word-break: break-word;
+  background: rgba(163, 177, 198, 0.08);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.referencesList li::before {
+  content: "[" counter(reference-counter) "]";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .referencesList li:hover {
+    background: rgba(163, 177, 198, 0.15);
+    transform: translateX(5px);
+  }
+}
+
+.referencesList a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(74, 123, 167, 0.3);
+  transition: all 0.3s ease;
+}
+
+.referencesList a:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+@media (max-width: 1200px) {
+  .titleSection h1 {
+    font-size: 48px;
+  }
+  .main {
+    max-width: 1200px;
+  }
+  .introSection,
+  .timelineCard,
+  .referencesSection {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleSection h1 {
+    font-size: 40px;
+  }
+  .card h2 {
+    font-size: 28px;
+  }
+  .card {
+    padding: 30px;
+    border-radius: 24px;
+  }
+  .main {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 16px;
+  }
+  .eraBadge {
+    font-size: 18px;
+  }
+  .eraSubtitle {
+    font-size: 23px;
+  }
+  .timelineCard {
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 30px;
+  }
+  .timelineYear {
+    flex: none;
+    justify-content: flex-start;
+    padding: 0 0 10px;
+  }
+  .timelineDot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -30px;
+    flex: none;
+    width: 24px;
+  }
+  .timelineDot::before {
+    left: 10px;
+    transform: none;
+    bottom: -30px;
+  }
+  .timelineDot::after {
+    left: 0;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    transform: none;
+  }
+  .timelineContent {
+    padding-left: 0;
+  }
+  .timelineCard:nth-last-of-type(2) .timelineDot::before {
+    bottom: 0;
+  }
+  .timelineCard:nth-last-of-type(2) .timelineDot {
+    bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .introSection,
+  .timelineCard,
+  .referencesSection {
+    opacity: 1;
+    animation: none;
+  }
+}
